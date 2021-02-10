@@ -1,0 +1,29 @@
+.main {
+  width: 50%;
+  height: 100%;
+  margin: 80px auto;
+  background-color: rgb(201, 201, 201);
+  padding: 20px 0px 50px 0px;
+  border-radius: 15px;
+}
+
+.heading {
+  font-size: 40px;
+  margin: 0;
+  color: #2a2a2a;
+  text-align: center;
+}
+
+.para {
+  color: rgb(0, 153, 255);
+  margin: 5px 0 40px 0;
+  text-align: center;
+}
+
+.nodata {
+  color: brown;
+}
+
+.hr {
+  margin-bottom: 20px;
+}
