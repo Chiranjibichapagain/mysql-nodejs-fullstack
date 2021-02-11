@@ -31,7 +31,6 @@ const createTodo = async (req, res) => {
                 console.log(result.message)
             }
         } )
-
     } catch (error) {
        console.log(error) 
     }
@@ -40,7 +39,8 @@ const createTodo = async (req, res) => {
 const updateTodo = async (req, res) => {
     try {
         const { id } = req.params
-        const {completed}= req.body
+        const { completed } = req.body
+        
         await dbConn.query(updateSql, [completed, id], (error, result) => {
             if (error) {
                console.log('Error=>', error)

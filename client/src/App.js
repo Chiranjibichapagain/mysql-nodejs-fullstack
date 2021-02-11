@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios'
 
 import Todo from './Todo'
 import AddTodo from "./AddTodo";
+import { getTodos } from './todoServices'
+
 import styles from './App.module.css'
 
 const App = () => {
@@ -10,15 +11,13 @@ const App = () => {
 
   useEffect(() => {
     fetchData()
-  }, [])
+  }, [data])
 
   const fetchData = async() => {
-    const { data } = await axios.get('http://localhost:3001/api/todos')
+    const data = await getTodos()
     setData(data)
   }
 
-  
-   
   return (
     <div className={styles.main}>
       <h1 className={styles.heading}>TODOs</h1>
