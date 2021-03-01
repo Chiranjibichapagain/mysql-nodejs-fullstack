@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { v4 as uuid } from 'uuid'
 
 import {addTodo} from '../todoServices'
 import styles from './AddTodo.module.css'
@@ -7,9 +6,7 @@ import styles from './AddTodo.module.css'
 function AddTodo() {
     
     const [todo, setTodo] = useState({
-        eventId: uuid(),
-        title: '',
-        completed:false
+        title: ''
     })
     
     const handleChange = (event) => {

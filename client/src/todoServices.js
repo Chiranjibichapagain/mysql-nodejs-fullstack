@@ -8,11 +8,11 @@ export const getTodos = async() => {
 }
 
 export const addTodo = async(todo) => {
-    console.log('in ser--', todo)
     await axios.post(baseUrl, todo)
 }
 
-export const updateTodo = async(id, changedItem) => {
+export const updateTodo = async (id, changedItem) => {
+    console.log('ser--', changedItem)
     await axios.put(`${baseUrl}/${id}`, changedItem)
 }
 
